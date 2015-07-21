@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h1>Emped a Map in Website</h1>
+
+
+<h3>Get the coordinates of a place</h3>
+<ul>
+    <li>Open <a href="https://maps.google.com">Google Maps</a>.</li>
+    <li>Right-click the place or area on the map.</li>
+    <li>Select What's here?</li>
+    <li>Under the search box, an info card with coordinates will appear.</li>
+</ul>
+
+
+
+<iframe id='google_maps_iframe' src="" width="100%" height="500" frameborder="0" style="border:0"></iframe>
+
+<script type="text/javascript">
+	var google_maps_embed_api_key = "AIzaSyB16FdzcPqrhkXcHOHnVutQFuoDFBDILpU";
+	var google_maps_embed_api_coordinates = "24.751291,46.895147";
+	var google_maps_embed_api_zoom = "10"; //from 0 to 21
+	var google_maps_embed_maptype = "roadmap"; // roadmap (the default) or satellite
+
+
+	var google_maps_embed_link = "https://www.google.com/maps/embed/v1/view?key="+google_maps_embed_api_key+"&center="+google_maps_embed_api_coordinates+"&zoom="+google_maps_embed_api_zoom+"&maptype="+google_maps_embed_maptype;
+
+	var google_maps_iframe = document.getElementById("google_maps_iframe");
+	google_maps_iframe.setAttribute("src",google_maps_embed_link);
+</script>
+
+
+
+</body>
+</html>
